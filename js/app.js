@@ -152,6 +152,7 @@ class App {
     this.__tracker = new CalorieTracker();
     document.getElementById('meal-form').addEventListener('submit', this._newItem.bind(this, 'meal'));
     document.getElementById('workout-form').addEventListener('submit', this._newItem.bind(this, 'workout'));
+    document.getElementById('workout-items').addEventListener('click', this._removeItem.bind(this, 'meal'));
   }
 
    _newItem(type, e) {
@@ -180,6 +181,18 @@ class App {
     const bsCollapse = new bootstrap.Collapse(collapsedItem, {
       toggle: true
     });
+   }
+
+   _removeItem(type, e) {
+    if (e.target.classList.contains('delete') || e.target.classList.contains('fa-xmark')) {
+      if (confirm('Are you sure?')) {
+        const id = e.target.closest('.card').getAttribute('data-id');
+        type === 'meal'
+        ? this.__tracker.removeMeal(id)
+        : this.__tracker.removeWorkout(id);
+      const item = e.target.closest('.card').remove();
+      }
+    }
    }
 }
 
