@@ -1,9 +1,5 @@
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-.hidden {
-  display: none;
-}
+@use 'base';
+@use 'utilities';
+@use 'components';
+@use 'layouts';
+@use 'vendor/prism.css' 
