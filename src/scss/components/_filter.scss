@@ -1,0 +1,8 @@
+@use "../abstracts/" as *;
+
+.filter {
+  padding-block: $padding-section-base;
+  &-item {
+    width: 100%;
+  }
+}

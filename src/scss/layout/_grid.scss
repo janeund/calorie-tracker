@@ -2,6 +2,6 @@
 
 .grid-auto-fit {
   display: grid;
-  gap: $grid-gap;
+  gap: $gap-base;
   grid-template-columns: repeat(auto-fit, minmax(min($card-min-width, 100%), 1fr));
 }

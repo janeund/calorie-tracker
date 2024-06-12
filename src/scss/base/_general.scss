@@ -4,3 +4,7 @@ body {
   color: var(--text-dark);
   background-color: var(--main-bg);
 }
+
+input:focus {
+  outline: none;
+}

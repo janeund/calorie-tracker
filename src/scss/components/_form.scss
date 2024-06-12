@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+.form {
+  padding: $padding-section-base;
+  box-shadow: $card-box-shadow;
+  &-control {
+    width: 100%;
+    padding: $input-padding;
+    border-radius: $border-radius-1;
+    border: $input-border;
+  }
+  &>*:not(:last-child) {
+    margin-block-end: $margin-base;
+  }
+}

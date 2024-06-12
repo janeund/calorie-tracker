@@ -29,7 +29,7 @@
   </header>
   <main class="main">
     <div class="container main-container">
-      <section class="stats grid-auto-fit">
+      <section class="stats grid-auto-fit mb-section">
         <div class="card">
           <p class="card-text">Daily Calorie Limit</p>
           <div id="calories-limit"></div>
@@ -47,49 +47,49 @@
           <div id="calories-remaining"></div>
         </div>
       </section>
-      <section class="progress">
+      <section class="progress mb-section">
         <div class="progress-bar"></div>
       </section>
-      <section class="filter">
-        <div class="filter-meals">
+      <section class="filter mb-section flex">
+        <div class="filter-meals filter-item">
           <input class="form-control" id="filter-meals-input" type="text" placeholder="Filter Meals...">
         </div>
-        <div class="filter-workouts">
+        <div class="filter-workouts filter-item">
           <input class="form-control" id="filter-workouts-input" type="text" placeholder="Filter Workouts...">
         </div>
       </section>
-      <section class="items-list">
+      <section class="items-list mb-section flex">
         <div class="meals">
-          <div class="meals-top">
+          <div class="meals-top flex mb-title">
             <h2 class="meals-title">Meals</h2>
             <!-- TODO: btn should collapse add item form -->
             <button class="btn" id="meals-button">Add Meal +</button>
           </div>
           <div class="meals-main">
-            <div class="card">
-              <form id="meal-form">
-                <input id="meal-name" class="form-control" type="text" placeholder="Enter Meal or Item">
-                <input id="meal-calories" class="form-control" type="number" placeholder="Enter Calories">
-                <button class="btn" type="submit"></button>
-              </form>
-            </div>
+
+            <form id="meal-form" class="form">
+              <input id="meal-name" class="form-control" type="text" placeholder="Enter Meal or Item">
+              <input id="meal-calories" class="form-control" type="number" placeholder="Enter Calories">
+              <button class="btn" type="submit">Add Meal Item</button>
+            </form>
+
             <div id="meal-items" class="meals-list"></div>
           </div>
         </div>
         <div class="workouts">
-          <div class="workouts-top">
+          <div class="workouts-top flex mb-title">
             <h2 class="workouts-title">Workouts</h2>
             <!-- TODO: btn should collapse add item form -->
             <button class="btn" id="workouts-button">Add workout +</button>
           </div>
           <div class="workouts-main">
-            <div class="card">
-              <form id="workout-form">
-                <input id="workout-name" class="form-control" type="text" placeholder="Enter workout or Item">
-                <input id="workout-calories" class="form-control" type="number" placeholder="Enter Calories">
-                <button class="btn" type="submit"></button>
-              </form>
-            </div>
+
+            <form id="workout-form" class="form">
+              <input id="workout-name" class="form-control" type="text" placeholder="Enter workout or Item">
+              <input id="workout-calories" class="form-control" type="number" placeholder="Enter Calories">
+              <button class="btn" type="submit">Add Meal Item</button>
+            </form>
+
             <div id="workout-items" class="workouts-list"></div>
           </div>
         </div>

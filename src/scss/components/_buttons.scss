@@ -5,8 +5,9 @@
   padding: $btn-padding-block $btn-padding-inline;
   background-color: var(--brand-colors-primary);
   color: var(--gray-colors-white);
-  font-weight: 600;
-  border-radius: rem(7);
+  border-radius: $border-radius-1;
+  font-size: $font-size-button;
+  font-weight: $font-weight-text-bold;
 } 
 
 .set-limit-btn {
