@@ -14,21 +14,86 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header mb-section">
     <header class="container header-container">
-      <a href="/" class="header-logo">
-        hey
-        <!-- <img class="header-logo-icon" src="./assets/icon-calories.svg" alt="CalorieTrack App Logo" srcset=""> -->
-      </a>
+      <div class="header-body">
+        <a href="/" class="header-logo">
+          <img class="header-logo-icon" src="./src/assets/icon-calories.svg" alt="CalorieTrack App Logo" srcset="">
+        </a>
+        <div class="action-buttons">
+          <button id="set-limit-btn" class="btn">Set Daily Limit</button>
+          <button id="reset-limit-btn" class="btn">Reset Day</button>
+        </div>
+      </div>
     </header>
   </header>
   <main class="main">
     <div class="container main-container">
-      <div class="stats">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-      </div>
+      <section class="stats grid-auto-fit">
+        <div class="card">
+          <p class="card-text">Daily Calorie Limit</p>
+          <div id="calories-limit"></div>
+        </div>
+        <div class="card">
+          <p class="card-text">Gain/Loss</p>
+          <div id="calories-total"></div>
+        </div>
+        <div class="card">
+          <p class="card-text">Calories Burned</p>
+          <div id="calories-burned"></div>
+        </div>
+        <div class="card">
+          <p class="card-text">Calories Remaining</p>
+          <div id="calories-remaining"></div>
+        </div>
+      </section>
+      <section class="progress">
+        <div class="progress-bar"></div>
+      </section>
+      <section class="filter">
+        <div class="filter-meals">
+          <input class="form-control" id="filter-meals-input" type="text" placeholder="Filter Meals...">
+        </div>
+        <div class="filter-workouts">
+          <input class="form-control" id="filter-workouts-input" type="text" placeholder="Filter Workouts...">
+        </div>
+      </section>
+      <section class="items-list">
+        <div class="meals">
+          <div class="meals-top">
+            <h2 class="meals-title">Meals</h2>
+            <!-- TODO: btn should collapse add item form -->
+            <button class="btn" id="meals-button">Add Meal +</button>
+          </div>
+          <div class="meals-main">
+            <div class="card">
+              <form id="meal-form">
+                <input id="meal-name" class="form-control" type="text" placeholder="Enter Meal or Item">
+                <input id="meal-calories" class="form-control" type="number" placeholder="Enter Calories">
+                <button class="btn" type="submit"></button>
+              </form>
+            </div>
+            <div id="meal-items" class="meals-list"></div>
+          </div>
+        </div>
+        <div class="workouts">
+          <div class="workouts-top">
+            <h2 class="workouts-title">Workouts</h2>
+            <!-- TODO: btn should collapse add item form -->
+            <button class="btn" id="workouts-button">Add workout +</button>
+          </div>
+          <div class="workouts-main">
+            <div class="card">
+              <form id="workout-form">
+                <input id="workout-name" class="form-control" type="text" placeholder="Enter workout or Item">
+                <input id="workout-calories" class="form-control" type="number" placeholder="Enter Calories">
+                <button class="btn" type="submit"></button>
+              </form>
+            </div>
+            <div id="workout-items" class="workouts-list"></div>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
   <footer class="footer">
@@ -36,6 +101,9 @@
 
     </div>
   </footer>
+  <div class="calorie-limit-modal">
+    <div class="modal-body"></div>
+  </div>
 </body>
 
 </html>

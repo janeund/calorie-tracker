@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.btn {
+  border: none;
+  padding: $btn-padding-block $btn-padding-inline;
+  background-color: var(--brand-colors-primary);
+  color: var(--gray-colors-white);
+  font-weight: 600;
+  border-radius: rem(7);
+} 
+
+.set-limit-btn {
+
+}

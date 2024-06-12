@@ -1,14 +1,16 @@
 @use "../abstracts/" as *;
 
 .header {
+  box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
   &-container {
-    background-color: $header-background-clr;
     padding: $padding-section-base;
   }
   &-logo-icon {
     width: rem(60);
-    & path {
-      fill: $header-logo-clr;
-    }
+  }
+  &-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

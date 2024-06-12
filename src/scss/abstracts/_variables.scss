@@ -27,11 +27,7 @@ $border-radius-1: rem(5);
 $border-radius-2: rem(10);
 
 // Box shadow
-$box-shadow-1: 
-  0px 6px 5px rgb(0, 0, 0, 0.012),
-  0px 22px 18px rgb(0, 0, 0, 0.018), 
-  0px 100px 80px rgb(0, 0, 0, 0.03);
-
+$box-shadow-1: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 // Components //
 
@@ -40,12 +36,14 @@ $header-background-clr: var(--brand-colors-secondary-2);
 $header-logo-clr: var(--gray-colors-white);
 
 
-
 // Card
 $card-min-width: rem(50);
-
+$card-border: 1px solid var(--gray-colors-gray-4);
+$card-box-shadow: $box-shadow-1;
+$card-color: var(--brand-colors-secondary-3);
 
 // Button
-
+$btn-padding-inline: rem(20);
+$btn-padding-block: rem(15);
 
 // variables naming inspiration https://github.com/kevin-powell/website-starter-template-v3-prefixed/blob/main/sass/abstracts/_tokens.scss

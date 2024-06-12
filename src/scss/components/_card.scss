@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $card-color;
+  box-shadow: $card-box-shadow;
+  width: rem(200);
+  height: rem(100);
+}
