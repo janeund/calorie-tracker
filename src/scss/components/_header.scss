@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.header {
+  &-container {
+    background-color: $header-background-clr;
+    padding: $padding-section-base;
+  }
+  &-logo-icon {
+    width: rem(60);
+    & path {
+      fill: $header-logo-clr;
+    }
+  }
+}

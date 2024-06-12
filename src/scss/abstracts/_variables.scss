@@ -1,0 +1,51 @@
+@use 'functions' as *;
+
+// Layout
+$wrapper-max-width: rem(1040);
+$page-padding-inline: rem(16);
+$grid-gap: rem(16);
+$flex-gap: rem(16);
+
+// Line height
+$line-height-base: 1.5;
+
+// Font family
+$font-family-base: 'Ubuntu', sans-serif;
+
+// Font size
+$font-size-heading-1: clamp(2rem, 1.143rem + 2.857vw, 3rem);
+$font-size-text-base: clamp(0.8rem, 0.457rem + 1.143vw, 1.2rem);
+
+// Font weight
+$font-weight-heading-1: 700;
+
+// Margin and padding
+$padding-section-base: rem(16);
+
+// Border radius
+$border-radius-1: rem(5);
+$border-radius-2: rem(10);
+
+// Box shadow
+$box-shadow-1: 
+  0px 6px 5px rgb(0, 0, 0, 0.012),
+  0px 22px 18px rgb(0, 0, 0, 0.018), 
+  0px 100px 80px rgb(0, 0, 0, 0.03);
+
+
+// Components //
+
+// Header
+$header-background-clr: var(--brand-colors-secondary-2);
+$header-logo-clr: var(--gray-colors-white);
+
+
+
+// Card
+$card-min-width: rem(50);
+
+
+// Button
+
+
+// variables naming inspiration https://github.com/kevin-powell/website-starter-template-v3-prefixed/blob/main/sass/abstracts/_tokens.scss

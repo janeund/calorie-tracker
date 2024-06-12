@@ -1,0 +1,6 @@
+@use "../abstracts/" as *;
+
+body {
+  color: var(--text-dark);
+  background-color: var(--main-bg);
+}

@@ -1,0 +1,8 @@
+@use "../abstracts/" as *;
+
+.grid-auto-fit {
+  display: grid;
+  gap: $grid-gap;
+  grid-template-columns: repeat(auto-fit, minmax(min($card-min-width, 100%), 1fr));
+  
+}
