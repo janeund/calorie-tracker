@@ -22,13 +22,19 @@ $font-weight-heading-1: 700;
 $font-weight-heading-2: 600;
 $font-weight-text-bold: 600;
 
+// Colors
+$color-base: var(--brand-colors-primary);
+$color-gray: var(--gray-colors-gray-7);
+
 // Margin and padding
 $padding-section-base: rem(16);
 $margin-base: rem(19);
 
-// Border radius
+// Border
 $border-radius-1: rem(7);
-$border-radius-2: rem(10);
+$border-radius-2: rem(25);
+$border-base: rem(1) solid var(--gray-colors-gray-6);
+$border-secondary: rem(0.5) solid var(--gray-colors-gray-6);
 
 // Box shadow
 $box-shadow-1: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -41,11 +47,11 @@ $header-logo-clr: var(--gray-colors-white);
 
 // Input
 $input-padding: rem(10);
-$input-border: rem(1) solid var(--gray-colors-gray-4);
+$input-border: $border-base;
 
 // Card
 $card-min-width: rem(50);
-$card-border: 1px solid var(--gray-colors-gray-4);
+$card-border: $border-base;
 $card-box-shadow: $box-shadow-1;
 $card-color: var(--brand-colors-secondary-3);
 

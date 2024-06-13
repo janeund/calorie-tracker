@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.progress {
+  width: 100%;
+  background-color: $color-gray;
+  border-radius: $border-radius-2;
+  border: $border-secondary;
+  &-bar {
+    width: 10%;
+    height: rem(20);
+    background-color: $color-base;
+    border-radius: $border-radius-2;
+  }
+}
