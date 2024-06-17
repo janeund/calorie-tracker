@@ -21,12 +21,14 @@ class CalorieTracker {
   addMeal(meal) {
     this._meals.push(meal);
     this._totalCalories += meal.calories;
+    this._displayNewItem(meal, 'meal');
     this._render();
   }
 
   addWorkout(workout) {
     this._workouts.push(workout);
     this._totalCalories -= workout.calories;
+    this._displayNewItem(workout, 'workout');
     this._render();
   }
 
@@ -79,6 +81,22 @@ class CalorieTracker {
     progressBarEl.style.width = `${Math.min(percentage, 100)}%`;
   }
 
+  _displayNewItem(item, type) {
+    const { id, name, calories } = item;
+    const itemsEl = document.getElementById(`${type}-items`);
+    console.log(type);
+    const itemEl = document.createElement('div');
+    itemEl.classList.add(`${type}-item`, 'card');
+    itemEl.setAttribute(`data-id`, id)
+    itemEl.innerHTML = `
+    <div class="card-text">
+      <div class="card-name">${name}</div>
+      <div class="card-calories">${calories}</div>
+    </div>
+    <div class="card-icon">x</div>`;
+    itemsEl.appendChild(itemEl);
+  }
+
   _render() {
     this._displayCaloriesTotal();
     this._displayCaloriesConsumed();
@@ -116,10 +134,10 @@ class App {
     const calories = document.getElementById(`${type}-calories`);
 
     // Validate inputs
-    if (name.value === '' || calories.value === '') {
-      alert('Please fill in the fileds');
-      return;
-    }
+    // if (name.value === '' || calories.value === '') {
+    //   alert('Please fill in the fileds');
+    //   return;
+    // }
 
     if (type === 'meal') {
       const meal = new Meal(name.value, +calories.value);

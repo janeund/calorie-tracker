@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+.list-items {
+  margin-block-start: rem(40);
+  display: grid;
+  gap: $gap-base;
+}
