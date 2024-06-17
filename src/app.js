@@ -14,6 +14,7 @@ class CalorieTracker {
     this._displayCaloriesConsumed();
     this._displayCaloriesBurned();
     this._displayCaloriesRemaining();
+    this._displayCaloriesProgress();
   }
 
   // Public methods/ API //
@@ -54,8 +55,28 @@ class CalorieTracker {
 
   _displayCaloriesRemaining() {
     const caloriesRemainingEl = document.getElementById('calories-remaining');
+    const progressBarEl = document.querySelector('.progress-bar');
     const remaining = this._caloriesLimit - this._totalCalories;
     caloriesRemainingEl.innerHTML = remaining;
+
+    // Change element bcg color for success/danger if calories limit is exceeded or not
+    if (remaining < 0) {
+      caloriesRemainingEl.parentElement.classList.remove('success');
+      caloriesRemainingEl.parentElement.classList.add('danger');
+      progressBarEl.classList.remove('success');
+      progressBarEl.classList.add('danger');
+    } else {
+      caloriesRemainingEl.parentElement.classList.remove('danger');
+      caloriesRemainingEl.parentElement.classList.add('success');
+      progressBarEl.classList.remove('danger');
+      progressBarEl.classList.add('success');
+    }
+  }
+
+  _displayCaloriesProgress() {
+    const progressBarEl = document.querySelector('.progress-bar');
+    const percentage = (this._totalCalories / this._caloriesLimit) * 100;
+    progressBarEl.style.width = `${Math.min(percentage, 100)}%`;
   }
 
   _render() {
@@ -63,6 +84,7 @@ class CalorieTracker {
     this._displayCaloriesConsumed();
     this._displayCaloriesBurned();
     this._displayCaloriesRemaining();
+    this._displayCaloriesProgress();
   }
 }
 
@@ -81,11 +103,48 @@ class Workout {
   }
 }
 
-const tracker = new CalorieTracker();
+class App {
+  constructor() {
+    this._tracker = new CalorieTracker();
+    document.getElementById('meal-form').addEventListener('submit', this._newMeal.bind(this))
+    document.getElementById('workout-form').addEventListener('submit', this._newWorkout.bind(this))
+  }
 
-const breakfast = new Meal('breakfest', 400);
-const run = new Workout('run', 200);
+  _newMeal(e) {
+    e.preventDefault();
+    const name = document.getElementById('meal-name');
+    const calories = document.getElementById('meal-calories');
 
-tracker.addMeal(breakfast);
-tracker.addWorkout(run);
-console.log(tracker);
+    // Validate inputs
+    if (name.value === '' || calories.value === '') {
+      alert('Please fill in the fileds');
+      return;
+    }
+
+    const meal = new Meal(name.value, +calories.value);
+    this._tracker.addMeal(meal);
+
+    name.value = '';
+    calories.value = '';
+  }
+
+  _newWorkout(e) {
+    e.preventDefault();
+    const name = document.getElementById('workout-name');
+    const calories = document.getElementById('workout-calories');
+
+    // Validate inputs
+    if (name.value === '' || calories.value === '') {
+      alert('Please fill in the fileds');
+      return;
+    }
+
+    const workout = new Workout(name.value, +calories.value);
+    this._tracker.addWorkout(workout);
+
+    name.value = '';
+    calories.value = '';
+  }
+}
+
+const app = new App();

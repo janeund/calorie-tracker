@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+
+.danger {
+  background-color: var(--state-colors-error);
+}
+
+.success {
+  background-color: var(--state-colors-success);
+}
