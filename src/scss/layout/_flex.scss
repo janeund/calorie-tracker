@@ -6,3 +6,9 @@
   justify-content: space-between;
   gap: $gap-base;
 }
+
+.flex-no-align-center {
+  display: flex;
+  justify-content: space-between;
+  gap: $gap-base;
+}
