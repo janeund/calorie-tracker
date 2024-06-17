@@ -28,11 +28,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: rem(30);
-    height: rem(30);
+    width: rem(25);
+    height: rem(35);
     background-color: var(--state-colors-error);
-    color: var(--gray-colors-white);
-    border-radius: $border-radius-1;
   }
 }
 
