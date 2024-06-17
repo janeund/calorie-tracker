@@ -93,7 +93,7 @@ class CalorieTracker {
       <div class="card-name">${name}</div>
       <div class="card-calories">${calories}</div>
     </div>
-    <div class="card-icon">x</div>`;
+    <div class="card-icon"><i class="fa-solid fa-trash"></i></div>`;
     itemsEl.appendChild(itemEl);
   }
 
