@@ -1,0 +1,37 @@
+@use "../abstracts/" as *;
+
+.calorie-limit-modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.modal {
+  &-content {
+    background-color: var(--gray-colors-white);
+    min-height: rem(250);
+    width: rem(550);
+    margin-inline: auto;
+    margin-block-start: rem(40);
+    padding: rem(20);
+    border-radius: $border-radius-1;
+  }
+  &-header {
+    border-block-end: rem(1) solid var(--gray-colors-gray-5);
+    margin-block-end: rem(15);
+  }
+}
+
+.limit-form-main {
+  display: grid;
+  gap: rem(10);
+  margin-block-end: rem(15);
+  label {
+    font-weight: 500;
+  }
+}

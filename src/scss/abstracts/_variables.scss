@@ -14,12 +14,12 @@ $font-family-base: 'Ubuntu', sans-serif;
 // Font size
 $font-size-heading-1: clamp(2rem, 1.143rem + 2.857vw, 3rem);
 $font-size-heading-2: clamp(1.3rem, 1.143rem + 2.857vw, 2.3rem);
+$font-size-heading-3: clamp(1.1rem, 0.643rem + 0.952vw, 1.8rem);
 $font-size-text-base: clamp(1rem, 0.457rem + 1.143vw, 1.3rem);
 $font-size-text-s: clamp(0.7rem, 0.457rem + 1.143vw, 1rem);
 
 // Font weight
 $font-weight-heading-1: 700;
-$font-weight-heading-2: 600;
 $font-weight-text-bold: 600;
 
 // Colors

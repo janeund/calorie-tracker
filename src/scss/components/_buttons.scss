@@ -13,3 +13,12 @@
 .set-limit-btn {
 
 }
+
+.btn-close {
+  background: none;
+  padding: rem(7) rem(10);
+  color: var(--state-colors-error);
+  .fa-solid {
+    font-size: rem(35);
+  }
+}

@@ -1,0 +1,7 @@
+1. add types for tags of buttons and inputs
+2. style outlines for buttons and inputs
+3. add animations, hovers, keyframes
+4. add input validation
+5. responsive design including hover effects with touchscreen
+6. adjust sizes, make variables if absent
+7. dif between click and submit
