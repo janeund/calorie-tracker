@@ -1,3 +1,5 @@
+import './scss/style.scss';
+
 class CalorieTracker {
   constructor() {
     this._caloriesLimit = Storage.getCalorieLimit();
