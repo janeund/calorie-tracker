@@ -1,5 +1,5 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -10,7 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name][contenthash].js',
     clean: true,
-    // assetModuleFilename: 'assets/[name][ext]',
+    assetModuleFilename: 'assets/[name][ext]',
   },
   devtool: 'source-map',
   devServer: {
@@ -59,7 +59,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Trackalorie',
       filename: 'index.html',
+      favicon: 'favicon.ico',
       template: 'src/template.html',
-    })
+    }),
   ],
 }
