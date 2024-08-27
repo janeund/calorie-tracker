@@ -7,7 +7,7 @@ Calorie counter app is designed to keep track of meals and workouts and monitor 
 ## Technologies Used
 
 - HTML5
-- CSS3
+- Sass
 - Vanilla JavaScript
 - Webpack
 
