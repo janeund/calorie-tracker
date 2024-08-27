@@ -1,6 +1,6 @@
 # Calorie Tracker App
 
-Calorie counter app built with vanilla JavaScript. User can track meals and workouts, set daily calories limit, calculate the total calories burned and consumed.
+Calorie counter app is designed to keep track of meals and workouts, set daily calories limit, calculate the total calories burned and consumed.
 
 [Live Demo](https://tracking-calories.netlify.app/)
 
