@@ -21,7 +21,7 @@ Calorie counter app is designed to keep track of meals and workouts and monitor 
 
 ## Future Improvements
 
-- add responsiveness for different screen sizes
+- Add responsiveness for different screen sizes
 
 ## Start Locally
 
